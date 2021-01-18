@@ -26,7 +26,8 @@ def main(msg: func.ServiceBusMessage):
         logging.error(err)
 
     try:
-        # Get notification message and subject from database using the notification_id
+        
+        # Get notification message and subject from database using the notifiation_id
         logging.info('Get message and subject')
         cursor.execute("Select message, subject from notification where id= {} ;".format(notification_id))
         note_query = cursor.fetchone()
