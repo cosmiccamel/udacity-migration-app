@@ -67,3 +67,14 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 | *Azure Service Bus*   |     Basic    | $0.01  |
 | *Azure Web App Service* |    F1    | free tier |
 | *Azure Storage Account* |     Basic    | <$0.10  |
+
+
+##  Architecture Explanation
+
+The reason that I used for the app architecture is : 
+
+Peformance: The division between the background processes and principal app allows for a more efficient services that a can be scalled independently and should perform better.
+
+Cost: By using a shared app service plan for both the web app and the function app  a higher cost optimization is achieved.
+
+Scaleability: On demand vertical and horizontal scalability can be achieved by using a Web App in Azure App Service.
